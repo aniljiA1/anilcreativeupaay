@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Box, Container, Heading, Flex } from "@chakra-ui/react";
+import Board from "./components/Board";
+import FilterBar from "./components/FilterBar";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container maxW="1200px" py={6}>
+      <Flex justify="space-between" align="center" mb={6}>
+        <Heading size="lg">Creative Upaay - Dashboard</Heading>
+      </Flex>
+
+      <FilterBar />
+
+      <Box mt={4}>
+        <Board />
+      </Box>
+    </Container>
   );
 }
-
-export default App;
